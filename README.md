@@ -6,3 +6,4 @@ My Personalize Script for my need
 - `warp_toggle.sh`: script for toggle cloudflare warp without conflicting with dnsmasq.
 - `displaymode.sh`: script for change xrandr display mode 
 - `displaymenu.sh`: script for select display mode using rofi
+- `powermenu.sh`: script for select power menu using rofi
