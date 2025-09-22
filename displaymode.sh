@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 key=$1
-if [ "$key" -lt 1 ] || [ "$key" -gt 4 ]; then
-	notify-send "Mode is not valid!"
-    exit 0
-fi
 
 LAPTOP="eDP-1"
 RESOLUTION="1920x1080"
