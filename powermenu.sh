@@ -1,25 +1,25 @@
 #!/usr/bin/env bash
 
-CHOICE=$(printf "1. Suspend\n2. Power Off\n3. Reboot\n4. Lockscreen\n5. Logout" \
+CHOICE=$(printf "1. Logout\n2. Suspend\n3. Power Off\n4. Reboot\n5. Lockscreen" \
          | rofi -dmenu -p "Power option:" | awk '{print $1}' | tr -d '.')
 
 [ -z "$CHOICE" ] && exit 0  # user cancelled
 
 case "$CHOICE" in
 	1)
-		systemctl suspend
+		i3-msg exit
 		;;
 	2)
-		systemctl poweroff
+		systemctl suspend
 		;;
 	3)
-		systemctl reboot
+		systemctl poweroff
 		;;
 	4)
-		light-locker-command -l
+		systemctl reboot
 		;;
 	5)
-		i3-msg exit
+		light-locker-command -l
 		;;
 	*)
 		notify-send "Not a valid option!"
